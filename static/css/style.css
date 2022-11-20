@@ -32,13 +32,13 @@ img .rounded-circle-profile{
 	border-radius: 100px;
 	border:1px solid white;
 	outline: none;
-	color: #fff;
-	background-color: transparent;
+	background-color: #fff;
 	border-color: #fff;
 }
-.search-bar input::placeholder{
-	color: #fff;
+.search-bar input{
+	color:#313438;
 }
+
 .alert-success{
 	padding: 1em;
 	text-align: center;
@@ -110,7 +110,7 @@ select option{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 1em;
+	padding: .7em;
 }
 /* make the image appear circular and infront of every contact */
 .list__item img{
@@ -125,11 +125,7 @@ select option{
 	border-radius: 50%;
 	margin-top: -30px;
 }
-p{
-	color: #fff;
-	font-size: 1.2em;
-	padding-left: 2 rem;
-}
+
 .contact-details{
 	padding-left: 1rem;
 }
@@ -138,9 +134,9 @@ p{
 
 .relationship{
 	color: #fff;
-    width: 5em;
+    width: 4em;
     text-align: center;
-    padding: 0.2em 0.3em;
+    padding: 0.1em 0.2em;
     border-radius: 50px;
     border-top-left-radius: 0;
     padding-left: .5rem;
@@ -151,7 +147,7 @@ p{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 1.5em;
+	padding: 0 .7em;
 	transition: 0.3s;
 }
 
