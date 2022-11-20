@@ -5,7 +5,7 @@ contacts-list app template
 ![Optional Text](/static/img/complete_contact_list.png)
 
 ## Description
-This template is a simple contacts list application that allows you to add, edit, and delete contacts. It is built on Django framework and uses a Postgres database to store the contacts.
+This is a simple contacts list application that allows you to add, edit, search and delete contacts. It is built on Django framework and uses a Postgres database to store the contacts.
 
 ## Setting up and Running the application
 1. Clone the repository using the following command
