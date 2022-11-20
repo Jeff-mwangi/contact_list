@@ -1,0 +1,165 @@
+body{
+	font-family: 'Inter', sans-serif;
+	margin: 0;
+}
+
+.container{
+	max-width: 428px;
+	margin: 0 auto;
+	background-color: #313438;
+}
+
+a{
+	text-decoration: none;
+}
+/* center the profile picture at the start and center of the contact */
+img .rounded-circle-profile{
+
+	width: 50%;
+}
+.header{
+	display: flex;
+	justify-content: space-evenly;
+	color: #fff;
+	background: linear-gradient(90deg, rgba(111,177,127,1) 0%, rgb(158, 182, 81) 100%);
+	padding: 2em 0;
+	align-items: center;
+}
+
+.contact-search{
+	font-size: 1.2em;
+	padding:.3em .3em;
+	border-radius: 100px;
+	border:1px solid white;
+	outline: none;
+	color: #fff;
+	background-color: transparent;
+	border-color: #fff;
+}
+.search-bar input::placeholder{
+	color: #fff;
+}
+.alert-success{
+	padding: 1em;
+	text-align: center;
+	color: #fff;
+	background-color: #76a85e73;
+}
+.message.error{
+	padding: 1em;
+	text-align: center;
+	color: #fff;
+	background-color: #a85e5e86;
+}
+.contacts-library{
+	background: #313438;
+}
+.no-contacts{
+	padding: 1em;
+	text-align: center;
+	color: rgb(190, 190, 190);
+}
+
+.add{
+	color: #fff;
+	font-size: 1.5em;
+}
+i{
+	color: #fff;
+	font-size: 1.5em;
+}
+
+.contact-name{
+	color: #fff;
+	font-size: 1.2em;
+	padding-left: 1 rem;
+}
+
+
+ul{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+hr{
+	border: 1px solicontactd #494a4b;
+}
+h1 .name{
+	color: #fff;
+	font-size: 1.5em;
+	padding: 0;
+}
+
+select{
+	margin-left: 15px;
+	font-size: 1.2em;
+	padding:.3em .3em;
+	border-radius: 100px;
+	outline: none;
+	background-color: #313438;
+	color: rgb(255, 255, 255);
+}
+select option{
+	color: #fff;
+	background-color: #313438;
+	border-radius: 100px;
+}
+.list__item{
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+/* make the image appear circular and infront of every contact */
+.list__item img{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	margin-top: 10px;
+}
+.contact-image{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	margin-top: -30px;
+}
+p{
+	color: #fff;
+	font-size: 1.2em;
+	padding-left: 2 rem;
+}
+.contact-details{
+	padding-left: 1rem;
+}
+
+/* make the contact name appear infront of every contact */
+
+.relationship{
+	color: #fff;
+    width: 5em;
+    text-align: center;
+    padding: 0.2em 0.3em;
+    border-radius: 50px;
+    border-top-left-radius: 0;
+    padding-left: .5rem;
+    background-color: #75A85E;
+}
+
+.contact-section{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 1.5em;
+	transition: 0.3s;
+}
+
+
+.contact-section:hover{
+	background-color: #48494a;
+}
+
+.text{
+	padding-left: 1em;
+}

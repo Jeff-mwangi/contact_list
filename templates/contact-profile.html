@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{%block content%}
+<div class="container">
+	<header class="hero">
+		<a href="{% url 'home' %}">
+			<i class="fas fa-chevron-circle-left back-btn"></i>
+		</a>
+		<span class="hero-info">
+			<img src="{{contact.profile.url}}" alt="{{contact.name}}" class="contact-image">
+		</span>
+		<div class="hero-info">
+			<h1 class="name">{{contact.name}}</h1>
+			<p class="relationship">{{contact.relationship}}</p>
+		</div>
+	</header>
+
+	<section class="contact-info">
+
+		<div class="info-line">
+			<i class="fas fa-phone icon-gradient"></i>
+			<p class="phone-number">{{contact.phone}}</p>
+		</div>
+
+
+
+		<div class="info-line">
+			<i class="fas fa-sms icon-gradient"></i>
+			<p class="sms">Send Message</p>
+		</div>
+
+
+
+		<div class="info-line">
+			<i class="fas fa-envelope icon-gradient"></i>
+			<p class="email">{{contact.email}}</p>
+		</div>
+
+
+
+		<div class="info-line">
+			<i id="location" class="fas fa-map-marker-alt icon-gradient"></i>
+			<p class="address">{{contact.address}}</p>
+		</div>
+	</section>
+
+	<section class="btn-container">
+		<a href="{% url 'edit' contact.id %}">
+					<i class="fas fa-cog icon-gradient"></i>
+					<span>Update</span>
+		</a>
+		<a href="{% url 'delete' contact.id %}">
+				<i class="fas fa-trash icon-gradient"></i>
+				<span>Delete</span>
+		</a>
+	</section>
+</div>
+{% endblock content%}

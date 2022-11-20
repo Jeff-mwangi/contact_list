@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{%block content%}
+<div class="container">
+	<header class="hero">
+
+		<a href="{% url 'home'%}">
+			<i class="fas fa-chevron-circle-left back-btn"></i>
+		</a>
+
+		<div class="hero-info">
+			<h1 class="name">New Contact</h1>
+		</div>
+	</header>
+
+	<section class="contact-info">
+		<form action="" method="post" enctype="multipart/form-data">
+			{%csrf_token%}
+			<div class="info-line">
+				<i class="fas fa-phone icon-gradient"></i>
+				<input type="text" class="type" name="name" placeholder="Full Name">
+			</div>
+
+
+			<div class="info-line">
+				<i class="fas fa-sms icon-gradient"></i>
+				<input type="text" class="type" name="phone" placeholder="Phone Number">
+			</div>
+
+
+
+			<div class="info-line">
+				<i class="fas fa-envelope icon-gradient"></i>
+				<input type="text" class="type" name="email" placeholder="Email">
+			</div>
+
+			<div class="info-line">
+				<i class="fas fa-user-circle icon-gradient"></i>
+				<!-- select family,friend, work or other -->
+				<select name="relationship" id="relationship">
+					<option value="family">Family</option>
+					<option value="friend">Friend</option>
+					<option value="work">Work</option>
+					<option value="other">Other</option>
+				</select>
+			</div>
+
+			<div class="info-line">
+				<i class="fas fa-map-marker-alt icon-gradient location"></i>
+				<input type="text" class="type" name="address" placeholder="Address">
+			</div>
+			<!-- adding image field -->
+			<div class="info-line">
+				<i class="fas fa-image icon-gradient"></i>
+				<input type="file" class="type" name="image" placeholder="Image">
+			</div>
+
+	</section>
+
+	<section class="button-container">
+		<div class="update-contact">
+			<i class="fas fa-check-circle icon-gradient"></i>
+			<button type="submit" class="button">Save Contact</button>
+		</div>
+		</form>
+	</section>
+	{% endblock content%}

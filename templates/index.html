@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block content%}
+	<div class="container">
+		<!--  SEARCH FORM -->
+		<header class="header">
+			
+			<form action="{% url 'search' %}" method="post" class="search-bar">
+				{%csrf_token%}
+				<input type="search-name" class="contact-search" name="search" placeholder="Search">
+			</form>
+
+			<!--  ADD-CONTACT BUTTON/ICON -->
+			<a href="{% url 'add'%}"><i class="fas fa-plus-circle add"></i></a>
+		</header>
+		    <!-- messages -->
+			{% if messages %}
+				{% for message in messages %}
+					{% if message.tags == 'success' %}
+						<div class="alert-success" role="alert">
+							{{ message }}
+						</div>
+					{% endif %}
+
+				{% endfor %}
+			{% endif %}
+		<!--  CONTACT LIST -->
+		<section class="contacts-library">
+			<ul class="contacts-list">
+				{%if contacts %}
+				{% for contact in contacts %}
+				<a href="{% url 'contact-profile' contact.id %}">
+					<div class="contact-section">
+						<li class="list__item">
+							<!-- setting url of the profile image -->
+							<span class="user-image">
+							<img src="{{contact.profile.url}}" width="20" height="20" class="rounded-circle-profile" alt="{{contact.name}}">
+						</span>
+							<span class="contact-details">
+							<p class="contact-name">{{contact.name}}</p>
+							<p class="relationship">{{contact.relationship | title}}</p>
+							</span>
+						</li>
+
+						<li class="list__item">
+							<i class="fas fa-phone"></i>
+							<i class="fas fa-sms text"></i>
+						</li>
+					</div>
+					<hr>
+				</a>
+				{% endfor %}
+				{% else %}
+				<p class="no-contacts">No contacts yet</p>
+				{% endif %}
+			</ul>
+		</section>
+	</div>
+	<script>
+		// make the message alerts dissappear in 3 sec in an animation way
+		$(document).ready(function(){
+			$('.alert-success').delay(3000).fadeOut('slow');
+		});
+		// search for user input in the search bar from the django filter and dispaly else display error
+		$(document).ready(function(){
+			$('.contact-search').on('keyup', function(){
+				var searchTerm = $(this).val().toLowerCase();
+				$('.contacts-list .contact-section').each(function(){
+					var contactName = $(this).find('.contact-name').text().toLowerCase();
+					if(contactName.indexOf(searchTerm) != -1){
+						$(this).show();
+					} else {
+						$(this).hide();
+					}
+				});
+			});
+		});
+	</script>
+
+	{% endblock content%}
