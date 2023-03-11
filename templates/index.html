@@ -26,7 +26,7 @@
 		<!--  CONTACT LIST -->
 		<section class="contacts-library">
 			<ul class="contacts-list">
-				{%if contacts %}
+				{% if contacts %}
 				{% for contact in contacts %}
 				<a href="{% url 'contact-profile' contact.id %}">
 					<div class="contact-section">
